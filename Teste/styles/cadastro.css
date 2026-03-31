@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url('../Imagens/Fundo_Editado.png');
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    height: 80%;
+    border-radius: 15px;
+    border: 0;
+         box-shadow: 1px 1px 5px #a9a9a9;
+}
+
+.login .container{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.img-login{
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to top right, #000000, #414141);
+    border-radius: 15px;
+    border-radius: 15px 0 0 15px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.boas_vindas{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 20px;
+}
+
+.boas_vindas span:first-of-type{
+    font-size: 28px;
+    font-weight: 550;
+    font-style: normal;
+}
+
+.img-login img{
+    width: 200px;
+}
+
+.img-login p{
+    font-size: 16px;
+}
+
+.img-login p a{
+    font-weight: 700;
+    font-style: normal;
+    color: #cb0000;
+}
+
+form{
+    background-color: white;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 0 15px 15px 0;
+}
+
+.link-senha{
+    font-size: 0.85em;
+    font-weight: 500;
+}
+
+.link-senha a{
+    font-weight: 650;
+}
+
+.titulo{
+    color: #cb0000;
+}
+
+.titulo h1{
+    margin: 0;
+    margin-bottom: 4%;
+    font-size: 33px;
+}
+
+.campo{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 18px;
+    box-shadow: 1px 1px 5px #a9a9a9;
+    padding: 4.5px;
+    margin: 7px 0 7px 0;
+}
+
+.campo img{
+    width: 7%;
+    margin-inline: 3%;
+}
+.campo input{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 480;
+    width: 83%;
+    height: 20px;
+    padding: 5px;
+    border: 0;
+    margin-left: 6px;
+    font-size: 14.5px;
+}
+
+.campo input[type="password"]::-ms-reveal {
+    display: none;
+  }
+  
+
+.campo input:focus{
+    outline: none;
+}
+
+.btn-entrar-cadastrar{
+    width: 67%;
+    height: 50px;
+}
+
+.btn-entrar-cadastrar button{
+    margin-top: 4%;
+    color: white;
+    background-color: #cb0000;
+    border: 0;
+    border-radius: 13px;
+    width: 90%;
+    max-width: 100%;
+    height: 70%;
+    max-height: 100%;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+

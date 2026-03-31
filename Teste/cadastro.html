@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/cadastro.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Teste</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="login">
+            <div class="img-login">
+                <div class="container">
+                    <div class="boas_vindas">
+                        <span>Olá</span>
+                        <span>Seja bem-vindo(a)!</span>
+                    </div>
+                    <img src="Imagens/Logo_teste.png" alt="">
+                    <p>Já tem uma conta? <a href="login.html">Faça login</a></p>
+                </div>
+            </div>
+            <form>
+                <div class="titulo">
+                    <h1>Cadastro</h1>
+                </div>
+                <div class="campo">
+                    <img src="Imagens/user.png" alt="">
+                    <input required id="input_nome" placeholder="Nome completo">
+                </div>
+                <div class="campo">
+                    <img src="Imagens/envelope.png" alt="">
+                    <input required type="email" id="input_email" placeholder="E-mail">
+                </div>
+                <div class="campo">
+                    <img src="Imagens/phone.png" alt="">
+                    <input required id="input_telefone" placeholder="Telefone">
+                </div>
+                <div class="campo">
+                    <img src="Imagens/key.png" alt="">
+                    <input required type="password" id="input_senha_cadastro" placeholder="Senha">
+                    <span class="material-icons" onclick="MostrarSenha('input_senha_cadastro', this)">
+        visibility
+    </span>
+                </div>
+                <div class="campo">
+                    <img src="Imagens/key_check.png" alt="">
+                    <input required type="password" id="input_confirmacao_senha" placeholder="Confirme a sua senha">
+                    <span class="material-icons" onclick="MostrarSenhaConfirmacao('input_confirmacao_senha', this)">
+        visibility
+    </span>
+                </div>
+                <div class="link-senha">
+                    <span>Temos uma sugestão de senha!</span>
+                    <a href="#" onclick="gerarSenha()">Clique aqui</a>
+                </div>
+                <div class="campo">
+                    <img src="Imagens/corporate.png" alt="">
+                    <input required id="input_cnpj" placeholder="CPF/CNPJ">
+                </div>
+                <div class="btn-entrar-cadastrar">
+                    <button type="submit">
+                        Já preenchi meu dados!
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+<script src="Teste_teste.js"></script>
+
+</html>
