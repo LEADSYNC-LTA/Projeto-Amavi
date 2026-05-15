@@ -1,0 +1,221 @@
+<mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
+  <root>
+    <mxCell id="0" />
+    <mxCell id="1" parent="0" />
+
+    <!-- ==================== USUARIO (abstract) ==================== -->
+    <mxCell id="10" value="&lt;b&gt;&lt;i&gt;&amp;lt;&amp;lt;abstract&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;Usuario&lt;/b&gt;" style="swimlane;startSize=40;fontStyle=1;align=center;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+      <mxGeometry x="580" y="30" width="220" height="160" as="geometry" />
+    </mxCell>
+    <mxCell id="11" value="- id: int&#xa;- nome: String&#xa;- cpf: String&#xa;- email: String&#xa;- senha: String&#xa;- dataCadastro: Date" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="10">
+      <mxGeometry y="40" width="220" height="80" as="geometry" />
+    </mxCell>
+    <mxCell id="12" value="+ login(): boolean&#xa;+ recuperarSenha(): void&#xa;+ alterarSenha(): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="10">
+      <mxGeometry y="120" width="220" height="40" as="geometry" />
+    </mxCell>
+
+    <!-- ==================== CLIENTE ==================== -->
+    <mxCell id="20" value="&lt;b&gt;Cliente&lt;/b&gt;" style="swimlane;startSize=30;align=center;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+      <mxGeometry x="280" y="290" width="220" height="160" as="geometry" />
+    </mxCell>
+    <mxCell id="21" value="- endereco: String&#xa;- telefone: String" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="20">
+      <mxGeometry y="30" width="220" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="22" value="+ buscarProduto(): void&#xa;+ adicionarCarrinho(): void&#xa;+ aplicarCupom(): void&#xa;+ fecharPedido(): void&#xa;+ realizarPagamento(): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="20">
+      <mxGeometry y="70" width="220" height="90" as="geometry" />
+    </mxCell>
+
+    <!-- ==================== ADMINISTRADOR ==================== -->
+    <mxCell id="30" value="&lt;b&gt;Administrador&lt;/b&gt;" style="swimlane;startSize=30;align=center;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+      <mxGeometry x="880" y="290" width="240" height="180" as="geometry" />
+    </mxCell>
+    <mxCell id="31" value="- nivelAcesso: String&#xa;- cargo: String" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="30">
+      <mxGeometry y="30" width="240" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="32" value="+ cadastrarProduto(): void&#xa;+ editarProduto(): void&#xa;+ excluirProduto(): void&#xa;+ gerarRelatorio(): void&#xa;+ gerenciarEstoque(): void&#xa;+ gerenciarCupons(): void&#xa;+ visualizarDashboard(): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="30">
+      <mxGeometry y="70" width="240" height="110" as="geometry" />
+    </mxCell>
+
+    <!-- ==================== HERANÇA Usuario -> Cliente ==================== -->
+    <mxCell id="h1" value="" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;endFill=0;exitX=0.5;exitY=1;exitObject=10;entryX=0.5;entryY=0;entryObject=20;" edge="1" parent="1" source="10" target="20">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <!-- ==================== HERANÇA Usuario -> Administrador ==================== -->
+    <mxCell id="h2" value="" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;endFill=0;exitX=0.5;exitY=1;exitObject=10;entryX=0.5;entryY=0;entryObject=30;" edge="1" parent="1" source="10" target="30">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <!-- ==================== PEDIDO ==================== -->
+    <mxCell id="40" value="&lt;b&gt;Pedido&lt;/b&gt;" style="swimlane;startSize=30;align=center;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+      <mxGeometry x="280" y="560" width="220" height="180" as="geometry" />
+    </mxCell>
+    <mxCell id="41" value="- id: int&#xa;- dataPedido: Date&#xa;- status: String&#xa;- valorTotal: double&#xa;- canal: String" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="40">
+      <mxGeometry y="30" width="220" height="80" as="geometry" />
+    </mxCell>
+    <mxCell id="42" value="+ calcularTotal(): void&#xa;+ confirmarPedido(): void&#xa;+ cancelarPedido(): void&#xa;+ emitirNotaFiscal(): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="40">
+      <mxGeometry y="110" width="220" height="70" as="geometry" />
+    </mxCell>
+
+    <!-- ==================== ITEM PEDIDO ==================== -->
+    <mxCell id="50" value="&lt;b&gt;ItemPedido&lt;/b&gt;" style="swimlane;startSize=30;align=center;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+      <mxGeometry x="30" y="810" width="200" height="140" as="geometry" />
+    </mxCell>
+    <mxCell id="51" value="- id: int&#xa;- quantidade: int&#xa;- precoUnitario: double&#xa;- subtotal: double" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="50">
+      <mxGeometry y="30" width="200" height="70" as="geometry" />
+    </mxCell>
+    <mxCell id="52" value="+ calcularSubtotal(): double" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="50">
+      <mxGeometry y="100" width="200" height="40" as="geometry" />
+    </mxCell>
+
+    <!-- ==================== PRODUTO ==================== -->
+    <mxCell id="60" value="&lt;b&gt;Produto&lt;/b&gt;" style="swimlane;startSize=30;align=center;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+      <mxGeometry x="580" y="560" width="220" height="190" as="geometry" />
+    </mxCell>
+    <mxCell id="61" value="- id: int&#xa;- nome: String&#xa;- descricao: String&#xa;- preco: double&#xa;- foto: String&#xa;- tamanhos: List&lt;String&gt;&#xa;- cores: List&lt;String&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="60">
+      <mxGeometry y="30" width="220" height="110" as="geometry" />
+    </mxCell>
+    <mxCell id="62" value="+ cadastrar(): void&#xa;+ editar(): void&#xa;+ excluir(): void&#xa;+ buscar(): Produto" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="60">
+      <mxGeometry y="140" width="220" height="50" as="geometry" />
+    </mxCell>
+
+    <!-- ==================== ESTOQUE ==================== -->
+    <mxCell id="70" value="&lt;b&gt;Estoque&lt;/b&gt;" style="swimlane;startSize=30;align=center;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+      <mxGeometry x="580" y="840" width="220" height="160" as="geometry" />
+    </mxCell>
+    <mxCell id="71" value="- id: int&#xa;- quantidadeDisponivel: int&#xa;- nivelMinimo: int&#xa;- dataAtualizacao: Date" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="70">
+      <mxGeometry y="30" width="220" height="70" as="geometry" />
+    </mxCell>
+    <mxCell id="72" value="+ registrarEntrada(): void&#xa;+ registrarSaida(): void&#xa;+ alertarBaixoEstoque(): void&#xa;+ consultarDisponivel(): int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="70">
+      <mxGeometry y="100" width="220" height="60" as="geometry" />
+    </mxCell>
+
+    <!-- ==================== PAGAMENTO ==================== -->
+    <mxCell id="80" value="&lt;b&gt;Pagamento&lt;/b&gt;" style="swimlane;startSize=30;align=center;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+      <mxGeometry x="30" y="560" width="210" height="180" as="geometry" />
+    </mxCell>
+    <mxCell id="81" value="- id: int&#xa;- valor: double&#xa;- dataPagamento: Date&#xa;- formaPagamento: String&#xa;- status: String" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="80">
+      <mxGeometry y="30" width="210" height="80" as="geometry" />
+    </mxCell>
+    <mxCell id="82" value="+ processar(): void&#xa;+ confirmar(): void&#xa;+ cancelar(): void&#xa;+ enviarConfirmacaoWhats(): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="80">
+      <mxGeometry y="110" width="210" height="70" as="geometry" />
+    </mxCell>
+
+    <!-- ==================== CUPOM ==================== -->
+    <mxCell id="90" value="&lt;b&gt;Cupom&lt;/b&gt;" style="swimlane;startSize=30;align=center;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+      <mxGeometry x="880" y="560" width="220" height="200" as="geometry" />
+    </mxCell>
+    <mxCell id="91" value="- id: int&#xa;- codigo: String&#xa;- tipoDesconto: String&#xa;- valorDesconto: double&#xa;- dataValidade: Date&#xa;- ativo: boolean" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="90">
+      <mxGeometry y="30" width="220" height="100" as="geometry" />
+    </mxCell>
+    <mxCell id="92" value="+ aplicar(): double&#xa;+ validar(): boolean&#xa;+ criar(): void&#xa;+ desativar(): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="90">
+      <mxGeometry y="130" width="220" height="70" as="geometry" />
+    </mxCell>
+
+    <!-- ==================== TRANSACAO FINANCEIRA ==================== -->
+    <mxCell id="100" value="&lt;b&gt;TransacaoFinanceira&lt;/b&gt;" style="swimlane;startSize=30;align=center;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+      <mxGeometry x="880" y="840" width="240" height="180" as="geometry" />
+    </mxCell>
+    <mxCell id="101" value="- id: int&#xa;- tipo: String&#xa;- valor: double&#xa;- descricao: String&#xa;- data: Date&#xa;- categoria: String" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="100">
+      <mxGeometry y="30" width="240" height="100" as="geometry" />
+    </mxCell>
+    <mxCell id="102" value="+ registrar(): void&#xa;+ calcularLucro(): double&#xa;+ gerarRelatorio(): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="100">
+      <mxGeometry y="130" width="240" height="50" as="geometry" />
+    </mxCell>
+
+    <!-- ==================== DASHBOARD ==================== -->
+    <mxCell id="110" value="&lt;b&gt;Dashboard&lt;/b&gt;" style="swimlane;startSize=30;align=center;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+      <mxGeometry x="1180" y="560" width="230" height="180" as="geometry" />
+    </mxCell>
+    <mxCell id="111" value="- periodoInicio: Date&#xa;- periodoFim: Date" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="110">
+      <mxGeometry y="30" width="230" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="112" value="+ exibirProdutosMaisVendidos(): void&#xa;+ exibirLucroMes(): double&#xa;+ exibirFluxoCaixa(): void&#xa;+ gerarRelatorio(): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="110">
+      <mxGeometry y="70" width="230" height="110" as="geometry" />
+    </mxCell>
+
+    <!-- ==================== NOTIFICACAO WHATSAPP ==================== -->
+    <mxCell id="120" value="&lt;b&gt;NotificacaoWhatsApp&lt;/b&gt;" style="swimlane;startSize=30;align=center;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+      <mxGeometry x="30" y="1030" width="220" height="160" as="geometry" />
+    </mxCell>
+    <mxCell id="121" value="- id: int&#xa;- destinatario: String&#xa;- mensagem: String&#xa;- dataEnvio: Date&#xa;- status: String" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="120">
+      <mxGeometry y="30" width="220" height="80" as="geometry" />
+    </mxCell>
+    <mxCell id="122" value="+ enviar(): void&#xa;+ confirmarEntrega(): boolean" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="120">
+      <mxGeometry y="110" width="220" height="50" as="geometry" />
+    </mxCell>
+
+    <!-- ==================== RELACIONAMENTOS ==================== -->
+
+    <!-- Cliente faz Pedido (1:N) -->
+    <mxCell id="r1" value="faz&#xa;1     N" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;endFill=0;" edge="1" parent="1" source="20" target="40">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <!-- Pedido contém ItemPedido (1:N) -->
+    <mxCell id="r2" value="contém&#xa;1     N" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;endFill=0;" edge="1" parent="1" source="40" target="50">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <!-- ItemPedido referencia Produto (N:1) -->
+    <mxCell id="r3" value="referencia&#xa;N     1" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;endFill=0;" edge="1" parent="1" source="50" target="60">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <!-- Produto possui Estoque (1:1) -->
+    <mxCell id="r4" value="possui&#xa;1     1" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;endFill=0;" edge="1" parent="1" source="60" target="70">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <!-- Pedido gera Pagamento (1:1) -->
+    <mxCell id="r5" value="gera&#xa;1     1" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;endFill=0;" edge="1" parent="1" source="40" target="80">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <!-- Cupom aplicado em Pedido (N:N) -->
+    <mxCell id="r6" value="é aplicado em&#xa;N          N" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;endFill=0;dashed=1;" edge="1" parent="1" source="90" target="40">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <!-- Pedido dispara NotificacaoWhatsApp (1:1) -->
+    <mxCell id="r7" value="dispara&#xa;1     1" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;endFill=0;" edge="1" parent="1" source="40" target="120">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <!-- Administrador gerencia Produto (dependência) -->
+    <mxCell id="r8" value="&lt;&lt;gerencia&gt;&gt;" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;endFill=0;dashed=1;" edge="1" parent="1" source="30" target="60">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <!-- Administrador gerencia Cupom (dependência) -->
+    <mxCell id="r9" value="&lt;&lt;gerencia&gt;&gt;" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;endFill=0;dashed=1;" edge="1" parent="1" source="30" target="90">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <!-- Administrador visualiza Dashboard (dependência) -->
+    <mxCell id="r10" value="&lt;&lt;visualiza&gt;&gt;" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;endFill=0;dashed=1;" edge="1" parent="1" source="30" target="110">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <!-- Dashboard consulta TransacaoFinanceira (dependência) -->
+    <mxCell id="r11" value="&lt;&lt;consulta&gt;&gt;" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;endFill=0;dashed=1;" edge="1" parent="1" source="110" target="100">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <!-- Dashboard consulta Pedido (dependência) -->
+    <mxCell id="r12" value="&lt;&lt;consulta&gt;&gt;" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;endFill=0;dashed=1;" edge="1" parent="1" source="110" target="40">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <!-- Dashboard consulta Estoque (dependência) -->
+    <mxCell id="r13" value="&lt;&lt;consulta&gt;&gt;" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;endFill=0;dashed=1;" edge="1" parent="1" source="110" target="70">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <!-- Pedido gera TransacaoFinanceira (associação) -->
+    <mxCell id="r14" value="gera&#xa;1     N" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;endFill=0;" edge="1" parent="1" source="40" target="100">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+  </root>
+</mxGraphModel>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+
+    <div class="page">
+
+        <!-- Logo ao lado do painel -->
+        <div class="logo">
+            <img src="Adobe Express - file.png" alt="Logo">
+            <span class="logo-label"><strong>LEADSYNC</strong></span>  
+        </div>
+
+        <!-- Painel de login -->
+        <div class="painel">
+            <h1>Acesso</h1>
+
+            <div class="campo" id="wrap-usuario">
+                <input type="text" id="input_usuario" placeholder="Usuário">
+            </div>
+
+            <div class="campo" id="wrap-senha">
+                <input type="password" id="input_senha" placeholder="Senha">
+                <button class="olho" onclick="toggleSenha()">👁</button>
+            </div>
+
+            <a href="#" class="esqueci">Esqueci a senha</a>
+
+            <div class="botoes">
+                <button onclick="acessar()">Acessar</button>
+                <button onclick="cadastrar()">Me Cadastrar</button>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Modal de sucesso -->
+    <div id="modal" onclick="fecharModal(event)">
+        <div class="modal-box">
+            <p>Sucesso!</p>
+            <button onclick="fecharModal()">OK</button>
+        </div>
+    </div>
+
+    <script src="login.js"></script>
+</body>
+</html>

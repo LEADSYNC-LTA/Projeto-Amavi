@@ -23,7 +23,7 @@ function MostrarSenhaConfirmacao(idInput,elemento){
 
 
 function gerarSenha(){
-    const caracateres = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ#$&*-!123456789'
+    const caracateres = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ#$&*%@-!123456789'
     var senha_gerada = ''
     
     for (var i = 0; i <= 8; i++){
