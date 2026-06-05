@@ -41,7 +41,7 @@ body::before {
 }
 .logo img {
     width: 280px;
-    /*filter: drop-shadow(0 0 14px rgba(203, 0, 0, 0.897));*/
+    filter: drop-shadow(0 0 14px rgba(203, 0, 0, 0.897));
 }
 .logo strong { color: #ca0303; font-size: 15px; }
 
@@ -163,7 +163,7 @@ body::before {
     color: white;
     Justify-content: space-between;
     Gap: 30px;
-    Flex-dirextion: column;
+    
 
 }
 .modal-box p {

@@ -1,0 +1,94 @@
+<mxfile host="app.diagrams.net" agent="Claude">
+  <diagram name="Diagrama de Implementação - LEADSYNC" id="deployment-diagram">
+    <mxGraphModel dx="1484" dy="664" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="900" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="node_user" parent="1" style="shape=mxgraph.uml.component;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=12;verticalAlign=top;" value="Dispositivo do Usuário" vertex="1">
+          <mxGeometry height="200" width="260" x="180" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="comp_browser" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff;strokeColor=#6c8ebf;fontSize=10;arcSize=10;" value="&lt;b&gt;Navegador Web&lt;/b&gt;&lt;br&gt;(Chrome / Safari / Firefox)" vertex="1">
+          <mxGeometry height="60" width="200" x="210" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="comp_react" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=10;arcSize=10;" value="&lt;b&gt;React SPA&lt;/b&gt;&lt;br&gt;(HTML + CSS + JS)" vertex="1">
+          <mxGeometry height="50" width="200" x="210" y="245" as="geometry" />
+        </mxCell>
+        <mxCell id="node_web" parent="1" style="shape=mxgraph.uml.component;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;fontSize=12;verticalAlign=top;" value="Servidor Web(Cloud – Docker Container)" vertex="1">
+          <mxGeometry height="340" width="300" x="530" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="comp_nginx" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff;strokeColor=#82b366;fontSize=10;arcSize=10;" value="&lt;b&gt;Nginx / Servidor Estático&lt;/b&gt;&lt;br&gt;Serve arquivos React" vertex="1">
+          <mxGeometry height="60" width="250" x="555" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="comp_php" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=10;arcSize=10;" value="&lt;b&gt;Backend PHP&lt;/b&gt;&lt;br&gt;Páginas dinâmicas, pagamentos" vertex="1">
+          <mxGeometry height="60" width="250" x="555" y="230" as="geometry" />
+        </mxCell>
+        <mxCell id="comp_python" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=10;arcSize=10;" value="&lt;b&gt;Backend Python&lt;/b&gt;&lt;br&gt;Automações, IA, lógica complexa" vertex="1">
+          <mxGeometry height="60" width="250" x="555" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="comp_api" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff;strokeColor=#82b366;fontSize=10;arcSize=50;" value="&lt;b&gt;REST API&lt;/b&gt;" vertex="1">
+          <mxGeometry height="40" width="150" x="605" y="390" as="geometry" />
+        </mxCell>
+        <mxCell id="node_db" parent="1" style="shape=mxgraph.uml.component;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;fontSize=12;verticalAlign=top;" value="Servidor de Banco de Dados(Cloud)" vertex="1">
+          <mxGeometry height="280" width="260" x="920" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="comp_mysql" parent="1" style="shape=mxgraph.flowchart.database;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=10;" value="" vertex="1">
+          <mxGeometry height="80" width="90" x="945" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="mysql_label" parent="1" style="text;html=1;align=center;fontSize=10;fontStyle=1;" value="MySQL" vertex="1">
+          <mxGeometry height="20" width="90" x="945" y="275" as="geometry" />
+        </mxCell>
+        <mxCell id="comp_mongo" parent="1" style="shape=mxgraph.flowchart.database;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=10;" value="" vertex="1">
+          <mxGeometry height="80" width="90" x="1065" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="mongo_label" parent="1" style="text;html=1;align=center;fontSize=10;fontStyle=1;" value="MongoDB" vertex="1">
+          <mxGeometry height="20" width="90" x="1065" y="275" as="geometry" />
+        </mxCell>
+        <mxCell id="node_ext" parent="1" style="shape=mxgraph.uml.component;fillColor=#f8cecc;strokeColor=#b85450;fontStyle=1;fontSize=12;verticalAlign=top;" value="Serviços Externos" vertex="1">
+          <mxGeometry height="200" width="650" x="530" y="520" as="geometry" />
+        </mxCell>
+        <mxCell id="ext_wa" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1f5e1;strokeColor=#25D366;fontSize=10;arcSize=10;" value="&lt;b&gt;WhatsApp API&lt;/b&gt;&lt;br&gt;Notificações automáticas" vertex="1">
+          <mxGeometry height="70" width="140" x="545" y="600" as="geometry" />
+        </mxCell>
+        <mxCell id="ext_ig" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fce4ec;strokeColor=#E1306C;fontSize=10;arcSize=10;" value="&lt;b&gt;Instagram API&lt;/b&gt;&lt;br&gt;Marketing / anúncios" vertex="1">
+          <mxGeometry height="70" width="140" x="710" y="600" as="geometry" />
+        </mxCell>
+        <mxCell id="ext_pay" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff8e1;strokeColor=#FFA000;fontSize=10;arcSize=10;" value="&lt;b&gt;Gateway de Pagamento&lt;/b&gt;&lt;br&gt;Processamento financeiro" vertex="1">
+          <mxGeometry height="70" width="140" x="875" y="600" as="geometry" />
+        </mxCell>
+        <mxCell id="ext_email" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ede7f6;strokeColor=#7E57C2;fontSize=10;arcSize=10;" value="&lt;b&gt;Serviço de E-mail&lt;/b&gt;&lt;br&gt;Campanhas e confirmações" vertex="1">
+          <mxGeometry height="70" width="130" x="1040" y="600" as="geometry" />
+        </mxCell>
+        <mxCell id="node_dev" parent="1" style="shape=mxgraph.uml.component;fillColor=#f3e5f5;strokeColor=#9c27b0;fontStyle=1;fontSize=12;verticalAlign=top;" value="Ambiente de Desenvolvimento" vertex="1">
+          <mxGeometry height="290" width="260" x="180" y="455" as="geometry" />
+        </mxCell>
+        <mxCell id="dev_vscode" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff;strokeColor=#9c27b0;fontSize=10;arcSize=10;" value="VS Code / PyCharm" vertex="1">
+          <mxGeometry height="35" width="220" x="200" y="490" as="geometry" />
+        </mxCell>
+        <mxCell id="dev_docker" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff;strokeColor=#9c27b0;fontSize=10;arcSize=10;" value="Docker (Containers de Teste)" vertex="1">
+          <mxGeometry height="35" width="220" x="200" y="540" as="geometry" />
+        </mxCell>
+        <mxCell id="dev_git" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff;strokeColor=#9c27b0;fontSize=10;arcSize=10;" value="Git / GitHub (Controle de Versão)" vertex="1">
+          <mxGeometry height="35" width="220" x="200" y="590" as="geometry" />
+        </mxCell>
+        <mxCell id="dev_figma" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff;strokeColor=#9c27b0;fontSize=10;arcSize=10;" value="Figma (Prototipação)" vertex="1">
+          <mxGeometry height="35" width="220" x="200" y="640" as="geometry" />
+        </mxCell>
+        <mxCell id="dev_mysql_wb" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff;strokeColor=#9c27b0;fontSize=10;arcSize=10;" value="MySQL Workbench (DB Design)" vertex="1">
+          <mxGeometry height="35" width="220" x="200" y="690" as="geometry" />
+        </mxCell>
+        <mxCell id="conn1" edge="1" parent="1" source="node_user" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#6c8ebf;strokeWidth=2;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" target="node_web" value="HTTPS / REST">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="conn2" edge="1" parent="1" source="node_web" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#d6b656;strokeWidth=2;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" target="node_db" value="TCP / SQL">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="conn3" edge="1" parent="1" source="node_web" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#b85450;strokeWidth=2;dashed=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;endArrow=open;" target="node_ext" value="HTTPS / API">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="conn4" edge="1" parent="1" source="node_dev" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#9c27b0;strokeWidth=2;dashed=1;exitX=1;exitY=0.3;entryX=0;entryY=0.9;" target="node_web" value="CI/CD Deploy">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
