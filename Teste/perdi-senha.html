@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recuperação de Senha</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="perdi_senha.css">
+</head>
+<body>
+    <header>
+        <div class="logo">AMAVI</div>
+        <nav>
+            <a href="#">Roupas</a>
+            <a href="#">Lançamentos</a>
+            <button class="login-btn">Login</button>
+        </nav>
+    </header>
+
+    <main>
+  <div class="card">
+
+    <!-- Form state -->
+    <div id="formState">
+      <h1>Recuperar senha</h1>
+      <p class="subtitle">Digite o e-mail cadastrado e enviaremos um link para você redefinir sua senha.</p>
+
+      <form id="recoverForm">
+        <label for="email">Endereço de e-mail</label>
+        <input type="email" id="email" placeholder="email@dominiofakedajane.net" required>
+
+        <button type="submit" class="submit">ENVIAR LINK</button>
+      </form>
+
+      <div class="links">
+        <a href="#">Voltar ao login</a>
+        <a href="#">Solicitar suporte</a>
+      </div>
+    </div>
+
+    <!-- Confirmation state -->
+    <div id="confirmState" class="confirmation">
+      <div class="icon">✓</div>
+      <h1>Verifique seu e-mail</h1>
+      <p class="subtitle">Se o endereço informado estiver cadastrado, você receberá em instantes um link para redefinir sua senha.</p>
+      <a href="#" class="back-link">Voltar ao login</a>
+    </div>
+
+  </div>
+</main>
+
+<footer>
+  <div class="logo">AMAVI</div>
+  <i class="fa-brands fa-instagram"></i>
+</footer>
+</body>
+</html>
