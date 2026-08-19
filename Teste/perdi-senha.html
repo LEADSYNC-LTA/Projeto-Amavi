@@ -13,40 +13,40 @@
         <nav>
             <a href="#">Roupas</a>
             <a href="#">Lançamentos</a>
-            <button class="login-btn">Login</button>
+            <a href="login.html" class="login-btn">Login</a>
         </nav>
     </header>
 
     <main>
-  <div class="card">
+        <div class="card">
 
-    <!-- Form state -->
-    <div id="formState">
-      <h1>Recuperar senha</h1>
-      <p class="subtitle">Digite o e-mail cadastrado e enviaremos um link para você redefinir sua senha.</p>
+        <!-- Form state -->
+        <div id="formState">
+        <h1>Recuperar senha</h1>
+        <p class="subtitle">Digite o e-mail cadastrado e enviaremos um link para você redefinir sua senha.</p>
 
-      <form id="recoverForm">
-        <label for="email">Endereço de e-mail</label>
-        <input type="email" id="email" placeholder="email@dominiofakedajane.net" required>
+        <form id="recoverForm">
+            <label for="email">Endereço de e-mail</label>
+            <input type="email" id="email" placeholder="email@dominiofakedajane.net" required>
 
-        <button type="submit" class="submit">ENVIAR LINK</button>
-      </form>
+            <button type="submit" class="submit">ENVIAR LINK</button>
+        </form>
 
-      <div class="links">
-        <a href="#">Voltar ao login</a>
-        <a href="#">Solicitar suporte</a>
-      </div>
+        <div class="links">
+            <a href="login.html">Voltar ao login</a>
+            <a href="#">Solicitar suporte</a>
+        </div>
+        </div>
+
+        <!-- Confirmation state -->
+        <div id="confirmState" class="confirmation">
+        <div class="icon">✓</div>
+        <h1>Verifique seu e-mail</h1>
+        <p class="subtitle">Se o endereço informado estiver cadastrado, você receberá em instantes um link para redefinir sua senha.</p>
+        <a href="#" class="back-link">Voltar ao login</a>
+        </div>
+
     </div>
-
-    <!-- Confirmation state -->
-    <div id="confirmState" class="confirmation">
-      <div class="icon">✓</div>
-      <h1>Verifique seu e-mail</h1>
-      <p class="subtitle">Se o endereço informado estiver cadastrado, você receberá em instantes um link para redefinir sua senha.</p>
-      <a href="#" class="back-link">Voltar ao login</a>
-    </div>
-
-  </div>
 </main>
 
 <footer>
