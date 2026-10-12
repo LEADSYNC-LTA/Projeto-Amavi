@@ -199,7 +199,7 @@ def create_app(test_config=None):
 
     limiter = Limiter(get_remote_address, app=app, storage_uri=os.getenv('RATELIMIT_STORAGE_URI', 'memory://'), default_limits=[])
     app.extensions['amavi_limiter'] = limiter
-    frontend = Path(__file__).resolve().parents[1] / 'frontend'
+    frontend = Path(__file__).resolve().parents[1] / 'FrontEnd'
 
     def current_user():
         return db.session.get(User, session['user_id']) if session.get('user_id') else None
